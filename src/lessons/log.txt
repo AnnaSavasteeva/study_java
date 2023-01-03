@@ -1,0 +1,4 @@
+Jan 04, 2023 12:27:48 AM lessons.Lesson2 main
+WARNING: Тестовое логирование 1
+Jan 04, 2023 12:27:48 AM lessons.Lesson2 main
+INFO: Тестовое логирование 2
