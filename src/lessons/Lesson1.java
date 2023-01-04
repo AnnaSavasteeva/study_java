@@ -2,7 +2,7 @@ package lessons;
 
 import java.util.Scanner;
 
-public class lesson1 {
+public class Lesson1 {
 
     public static void main(String[] args) {
 //        Определение типа
