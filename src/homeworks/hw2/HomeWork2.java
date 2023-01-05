@@ -24,15 +24,15 @@ public class HomeWork2 {
         List<Integer> disksA = bar1.getDisks();
         List<Integer> disksC = bar3.getDisks();
         if (n == 1) {
-            System.out.println(msg);
             disksC.add(disksA.get(0));
             disksA.remove(disksA.get(0));
+            System.out.println(msg);
             return;
         }
         hanoi(n - 1, bar1, bar3, bar2);
-        System.out.println(msg);
         disksC.add(disksA.get(0));
         disksA.remove(disksA.get(0));
+        System.out.println(msg);
         hanoi(n - 1, bar2, bar1, bar3);
     }
 
