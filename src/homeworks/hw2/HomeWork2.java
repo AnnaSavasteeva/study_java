@@ -11,11 +11,17 @@ public class HomeWork2 {
         Bar barA = new Bar('A');
         Bar barB = new Bar('B');
         Bar barC = new Bar('C');
+
         Scanner sc = new Scanner(System.in);
         System.out.println("Задайте число дисков: ");
         int n = sc.nextInt();
-        fillBar(n, barA);
+        barA.fillBar(n);
+
+        printAllBars(barA, barB, barC);
+        System.out.println("--------");
+
         hanoi(n, barA, barB, barC);
+
         System.out.println("--------");
         printAllBars(barA, barB, barC);
     }
@@ -39,12 +45,6 @@ public class HomeWork2 {
 
     private static String getMsg(int n, char c1, char c2) {
         return format("Диск %d из %c на %c", n, c1, c2);
-    }
-
-    private static void fillBar(Integer n, Bar bar) {
-        for (int i = n; i > 0; i--) {
-            bar.getDisks().add(i);
-        }
     }
 
     private static void printBar(Bar bar) {

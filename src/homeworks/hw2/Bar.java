@@ -12,6 +12,12 @@ public class Bar {
         this.barName = name;
     }
 
+    public void fillBar(int n) {
+        for (int i = n; i > 0; i--) {
+            this.disks.add(i);
+        }
+    }
+
     public char getBarName() {
         return barName;
     }
