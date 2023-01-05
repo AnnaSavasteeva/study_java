@@ -5,8 +5,8 @@ import java.util.List;
 
 public class Bar {
 
-    private char barName;
-    private List<Integer> disks = new ArrayList<>();
+    private final char barName;
+    private final List<Integer> disks = new ArrayList<>();
 
     public Bar(char name) {
         this.barName = name;
