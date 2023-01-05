@@ -16,6 +16,7 @@ public class HomeWork2 {
         int n = sc.nextInt();
         fillBar(n, barA);
         hanoi(n, barA, barB, barC);
+        System.out.println("--------");
         printAllBars(barA, barB, barC);
     }
 
@@ -24,14 +25,14 @@ public class HomeWork2 {
         List<Integer> disksA = bar1.getDisks();
         List<Integer> disksC = bar3.getDisks();
         if (n == 1) {
-            disksC.add(disksA.get(0));
-            disksA.remove(disksA.get(0));
+            disksC.add(disksA.get(disksA.size() - 1));
+            disksA.remove(disksA.get(disksA.size() - 1));
             System.out.println(msg);
             return;
         }
         hanoi(n - 1, bar1, bar3, bar2);
-        disksC.add(disksA.get(0));
-        disksA.remove(disksA.get(0));
+        disksC.add(disksA.get(disksA.size() - 1));
+        disksA.remove(disksA.get(disksA.size() - 1));
         System.out.println(msg);
         hanoi(n - 1, bar2, bar1, bar3);
     }
@@ -41,7 +42,7 @@ public class HomeWork2 {
     }
 
     private static void fillBar(Integer n, Bar bar) {
-        for (int i = 1; i <= n; i++) {
+        for (int i = n; i > 0; i--) {
             bar.getDisks().add(i);
         }
     }
